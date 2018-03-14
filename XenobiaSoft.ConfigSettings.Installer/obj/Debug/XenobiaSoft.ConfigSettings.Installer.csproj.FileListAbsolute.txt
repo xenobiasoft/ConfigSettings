@@ -1,0 +1,17 @@
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\XenobiaSoft.ConfigSettings.Installer.dll
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\XenobiaSoft.ConfigSettings.Installer.pdb
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\Autofac.dll
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\XenobiaSoft.ConfigSettings.Repository.dll
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\XenobiaSoft.ConfigSettings.Services.dll
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\EntityFramework.dll
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\XenobiaSoft.ConfigSettings.Repository.pdb
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\XenobiaSoft.ConfigSettings.Repository.dll.config
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\XenobiaSoft.ConfigSettings.Services.pdb
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\XenobiaSoft.ConfigSettings.Services.dll.config
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\Autofac.xml
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\EntityFramework.xml
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\obj\Debug\XenobiaSoft.ConfigSettings.Installer.csprojResolveAssemblyReference.cache
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\obj\Debug\XenobiaSoft.ConfigSettings.Installer.csproj.CoreCompileInputs.cache
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\obj\Debug\XenobiaSoft.ConfigSettings.Installer.csproj.CopyComplete
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\obj\Debug\XenobiaSoft.ConfigSettings.Installer.dll
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\obj\Debug\XenobiaSoft.ConfigSettings.Installer.pdb
