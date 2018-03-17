@@ -6,7 +6,7 @@ namespace XenobiaSoft.ConfigSettings.Tests.Integration
 {
 	public abstract class BaseTest<TTestType> where TTestType : class
 	{
-		private IContainer _Container;
+		private IContainer _container;
 
 		[SetUp]
 		public void Setup()
@@ -16,7 +16,7 @@ namespace XenobiaSoft.ConfigSettings.Tests.Integration
 			var builder = new ContainerBuilder();
 			builder.RegisterModule(new InstallerModule());
 
-			_Container = builder.Build();
+			_container = builder.Build();
 
 			PostSetup();
 		}
@@ -27,7 +27,7 @@ namespace XenobiaSoft.ConfigSettings.Tests.Integration
 
 		protected TType Resolve<TType>() where TType : class
 		{
-			return _Container.Resolve<TType>();
+			return _container.Resolve<TType>();
 		}
 
 		public TestContext TestContext => TestContext.CurrentContext;

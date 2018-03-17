@@ -30,3 +30,5 @@ E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Integration\obj\
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Integration\obj\Debug\XenobiaSoft.ConfigSettings.Tests.Integration.dll
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Integration\obj\Debug\XenobiaSoft.ConfigSettings.Tests.Integration.pdb
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Integration\bin\Debug\nunit.framework.pdb
+E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Integration\bin\Debug\EntityFramework.SqlServer.dll
+E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Integration\bin\Debug\EntityFramework.SqlServer.xml
