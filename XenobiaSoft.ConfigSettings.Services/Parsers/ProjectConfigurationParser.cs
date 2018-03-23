@@ -1,5 +1,4 @@
-﻿using System.IO;
-using System.Linq;
+﻿using System.Linq;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Parsers;
 using XenobiaSoft.ConfigSettings.Services.Models;
 
@@ -7,16 +6,16 @@ namespace XenobiaSoft.ConfigSettings.Services.Parsers
 {
 	public class ProjectConfigurationParser : IProjectConfigurationParser
 	{
-		private readonly IAppSettingsParser _AppSettingsParser;
+		private readonly IAppSettingsParser _appSettingsParser;
 
 		public ProjectConfigurationParser(IAppSettingsParser appSettingsParser)
 		{
-			_AppSettingsParser = appSettingsParser;
+			_appSettingsParser = appSettingsParser;
 		}
 
 		public ProjectEnvironmentConfiguration Parse(ConfigFile configFile)
 		{
-			var appSettings = _AppSettingsParser.Parse(configFile);
+			var appSettings = _appSettingsParser.Parse(configFile);
 
 			if (!appSettings.Any())
 			{

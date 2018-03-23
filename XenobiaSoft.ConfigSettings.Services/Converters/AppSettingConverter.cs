@@ -7,16 +7,16 @@ namespace XenobiaSoft.ConfigSettings.Services.Converters
 {
 	public class AppSettingConverter : IAppSettingConverter
 	{
-		private readonly IBuilderFactory _BuilderFactory;
+		private readonly IBuilderFactory _builderFactory;
 
 		public AppSettingConverter(IBuilderFactory builderFactory)
 		{
-			_BuilderFactory = builderFactory;
+			_builderFactory = builderFactory;
 		}
 
 		public AppSetting Convert(AppSettingModel appSettingModel)
 		{
-			return _BuilderFactory
+			return _builderFactory
 				.AppSettingBuilder()
 				.WithKey(appSettingModel.Key)
 				.WithValue(appSettingModel.Value)

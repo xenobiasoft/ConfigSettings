@@ -1,5 +1,4 @@
-﻿using System.IO;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using XenobiaSoft.ConfigSettings.Services.Interfaces;
 
 namespace XenobiaSoft.ConfigSettings.Tests.Integration.Services
@@ -12,18 +11,13 @@ namespace XenobiaSoft.ConfigSettings.Tests.Integration.Services
 		public void PopulateDb()
 		{
 			// Assemble
-			var rootPath = GetConfigSamplePath();
+			var rootPath = @"E:\Git\dryfly\FreeStone";
 
 			// Act
 			Sut.ClearDb();
 			Sut.LoadConfigurations(rootPath);
 
 			// Assert
-		}
-
-		private string GetConfigSamplePath()
-		{
-			return Path.Combine(TestContext.TestDirectory, "ConfigSample");
 		}
 	}
 }
