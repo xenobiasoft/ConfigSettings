@@ -24,7 +24,7 @@ namespace XenobiaSoft.ConfigSettings.Services.Parsers
 
 					return new AppSettingModel(key, value, transformType);
 				})
-				.ToList();
+				.ToList() ?? new List<AppSettingModel>();
 		}
 	}
 }
