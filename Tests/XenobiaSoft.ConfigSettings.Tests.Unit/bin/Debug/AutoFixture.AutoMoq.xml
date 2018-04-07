@@ -21,18 +21,6 @@
             </summary>
             <param name="relay">A mock relay to be added to <see cref="P:AutoFixture.IFixture.ResidueCollectors"/></param>
         </member>
-        <member name="P:AutoFixture.AutoMoq.AutoConfiguredMoqCustomization.Relay">
-            <summary>
-            Gets the relay that will be added to <see cref="P:AutoFixture.IFixture.ResidueCollectors"/> when <see cref="M:AutoFixture.AutoMoq.AutoConfiguredMoqCustomization.Customize(AutoFixture.IFixture)"/> is invoked.
-            </summary>
-        </member>
-        <member name="M:AutoFixture.AutoMoq.AutoConfiguredMoqCustomization.Customize(AutoFixture.IFixture)">
-            <summary>
-            Customizes a <see cref="T:AutoFixture.IFixture"/> to enable auto-mocking and auto-setup with Moq.
-            Members of a mock will be automatically setup to retrieve the return values from <paramref name="fixture"/>.
-            </summary>
-            <param name="fixture">The fixture to customize.</param>
-        </member>
         <member name="T:AutoFixture.AutoMoq.AutoMockPropertiesCommand">
             <summary>
             A command that populates all public writable properties/fields of a mock object with anonymous values.
@@ -56,10 +44,20 @@
             <summary>
             Enables auto-mocking with Moq.
             </summary>
+            <remarks>
+            NOTICE! You can assign the customization properties to tweak the features you would like to enable. Example:
+            <br />
+            <code>new AutoMoqCustomization { ConfigureMembers = true }</code>
+            </remarks>
         </member>
         <member name="M:AutoFixture.AutoMoq.AutoMoqCustomization.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:AutoFixture.AutoMoq.AutoMoqCustomization"/> class.
+            <para>
+            NOTICE! You can assign the customization properties to tweak the features you would like to enable. Example:
+            <br />
+            <code>new AutoMoqCustomization { ConfigureMembers = true }</code>
+            </para>
             </summary>
         </member>
         <member name="M:AutoFixture.AutoMoq.AutoMoqCustomization.#ctor(AutoFixture.Kernel.ISpecimenBuilder)">
@@ -69,16 +67,26 @@
             </summary>
             <param name="relay">The relay.</param>
         </member>
+        <member name="P:AutoFixture.AutoMoq.AutoMoqCustomization.ConfigureMembers">
+            <summary>
+            Specifies whether members of a mock will be automatically setup to retrieve the return values from a fixture.
+            </summary>
+        </member>
+        <member name="P:AutoFixture.AutoMoq.AutoMoqCustomization.GenerateDelegates">
+            <summary>
+            If value is <c>true</c>, delegate requests are intercepted and created by Moq.
+            Otherwise, if value is <c>false</c>, delegates are created by the AutoFixture kernel.
+            </summary>
+        </member>
         <member name="P:AutoFixture.AutoMoq.AutoMoqCustomization.Relay">
             <summary>
-            Gets the relay that will be added to <see cref="P:AutoFixture.IFixture.ResidueCollectors"/> when
+            Gets or sets the relay that will be added to <see cref="P:AutoFixture.IFixture.ResidueCollectors"/> when
             <see cref="M:AutoFixture.AutoMoq.AutoMoqCustomization.Customize(AutoFixture.IFixture)"/> is invoked.
             </summary>
-            <seealso cref="M:AutoFixture.AutoMoq.AutoMoqCustomization.#ctor(AutoFixture.Kernel.ISpecimenBuilder)"/>
         </member>
         <member name="M:AutoFixture.AutoMoq.AutoMoqCustomization.Customize(AutoFixture.IFixture)">
             <summary>
-            Customizes a <see cref="T:AutoFixture.IFixture"/> to enable auto-mocking with Moq.
+            Customizes an <see cref="T:AutoFixture.IFixture"/> to enable auto-mocking with Moq.
             </summary>
             <param name="fixture">The fixture upon which to enable auto-mocking.</param>
         </member>

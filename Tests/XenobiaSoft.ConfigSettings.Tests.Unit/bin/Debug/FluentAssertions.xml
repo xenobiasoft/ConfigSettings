@@ -2399,6 +2399,27 @@
                 Returns <c>null</c> if no such property exists.
             </returns>
         </member>
+        <member name="M:FluentAssertions.Common.TypeExtensions.IsCSharpAbstract(System.Type)">
+            <summary>
+            Check if the type is declared as abstract. 
+            </summary>
+            <param name="type">Type to be checked</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentAssertions.Common.TypeExtensions.IsCSharpSealed(System.Type)">
+            <summary>
+            Check if the type is declared as sealed. 
+            </summary>
+            <param name="type">Type to be checked</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentAssertions.Common.TypeExtensions.IsCSharpStatic(System.Type)">
+            <summary>
+            Check if the type is declared as static. 
+            </summary>
+            <param name="type">Type to be checked</param>
+            <returns></returns>
+        </member>
         <member name="T:FluentAssertions.Common.ValueFormatterDetectionMode">
             <summary>
             Defines the modes in which custom implementations of <see cref="T:FluentAssertions.Formatting.IValueFormatter"/>
@@ -2678,6 +2699,9 @@
             <summary>
                 Returns either the run-time or compile-time type of the subject based on the options provided by the caller.
             </summary>
+            <remarks>
+            If the expectation is a nullable type, it should return the type of the wrapped object.
+            </remarks>
         </member>
         <member name="P:FluentAssertions.Equivalency.EquivalencyValidationContext.Subject">
             <summary>
@@ -5237,7 +5261,7 @@
             The maximum amount of which the two values may differ.
             </param>
             <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion 
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
             is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
             </param>
             <param name="becauseArgs">
@@ -5256,7 +5280,7 @@
             The maximum amount of which the two values may differ.
             </param>
             <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion 
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
             is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
             </param>
             <param name="becauseArgs">
@@ -5275,7 +5299,7 @@
             The maximum amount of which the two values may differ.
             </param>
             <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion 
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
             is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
             </param>
             <param name="becauseArgs">
@@ -5294,7 +5318,7 @@
             The maximum amount of which the two values may differ.
             </param>
             <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion 
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
             is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
             </param>
             <param name="becauseArgs">
@@ -5313,7 +5337,7 @@
             The maximum amount of which the two values may differ.
             </param>
             <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion 
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
             is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
             </param>
             <param name="becauseArgs">
@@ -5332,7 +5356,7 @@
             The maximum amount of which the two values may differ.
             </param>
             <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion 
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
             is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
             </param>
             <param name="becauseArgs">
@@ -10089,6 +10113,60 @@
             is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.</param>
             <param name="becauseArgs">Zero or more objects to format using the placeholders in <see cref="!:because"/>.</param>
         </member>
+        <member name="M:FluentAssertions.Types.TypeAssertions.BeSealed(System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Type"/> is sealed.
+            </summary>
+            <param name="because">A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.</param>
+            <param name="becauseArgs">Zero or more objects to format using the placeholders in <see cref="!:because"/>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentAssertions.Types.TypeAssertions.NotBeSealed(System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Type"/> is not sealed.
+            </summary>
+            <param name="because">A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.</param>
+            <param name="becauseArgs">Zero or more objects to format using the placeholders in <see cref="!:because"/>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentAssertions.Types.TypeAssertions.BeAbstract(System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Type"/> is abstract.
+            </summary>
+            <param name="because">A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.</param>
+            <param name="becauseArgs">Zero or more objects to format using the placeholders in <see cref="!:because"/>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentAssertions.Types.TypeAssertions.NotBeAbstract(System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Type"/> is not abstract.
+            </summary>
+            <param name="because">A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.</param>
+            <param name="becauseArgs">Zero or more objects to format using the placeholders in <see cref="!:because"/>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentAssertions.Types.TypeAssertions.BeStatic(System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Type"/> is static.
+            </summary>
+            <param name="because">A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.</param>
+            <param name="becauseArgs">Zero or more objects to format using the placeholders in <see cref="!:because"/>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentAssertions.Types.TypeAssertions.NotBeStatic(System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Type"/> is not static.
+            </summary>
+            <param name="because">A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.</param>
+            <param name="becauseArgs">Zero or more objects to format using the placeholders in <see cref="!:because"/>.</param>
+            <returns></returns>
+        </member>
         <member name="M:FluentAssertions.Types.TypeAssertions.HaveProperty(System.Type,System.String,System.String,System.Object[])">
             <summary>
             Asserts that the current type has a property of type <paramref name="propertyType"/> named <paramref name="name"/>.
@@ -10182,7 +10260,7 @@
             <typeparam name="TInterface">The interface whose member is being explicitly implemented.</typeparam>
             <param name="name">The name of the method.</param>
             <param name="parameterTypes">The expected types of the method parameters.</param>
-            /// <param name="because">A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
+            <param name="because">A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
                 is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.</param>
             <param name="becauseArgs">Zero or more objects to format using the placeholders in <see cref="!:because"/>.</param>
         </member>
@@ -10206,7 +10284,7 @@
             <typeparam name="TInterface">The interface whose member is not being explicitly implemented.</typeparam>
             <param name="name">The name of the method.</param>
             <param name="parameterTypes">The expected types of the method parameters.</param>
-            /// <param name="because">A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
+            <param name="because">A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
                 is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.</param>
             <param name="becauseArgs">Zero or more objects to format using the placeholders in <see cref="!:because"/>.</param>
         </member>

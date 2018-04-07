@@ -3835,6 +3835,21 @@
             Creates new <see cref="T:System.Delegate"/> instances.
             </summary>
         </member>
+        <member name="P:AutoFixture.Kernel.DelegateGenerator.Specification">
+            <summary>
+            The specification used to verify that request is for the supported delegate type.
+            </summary>
+        </member>
+        <member name="M:AutoFixture.Kernel.DelegateGenerator.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:AutoFixture.Kernel.DelegateGenerator"/> type.
+            </summary>
+        </member>
+        <member name="M:AutoFixture.Kernel.DelegateGenerator.#ctor(AutoFixture.Kernel.IRequestSpecification)">
+            <summary>
+            Creates a new instance of the <see cref="T:AutoFixture.Kernel.DelegateGenerator"/> type.
+            </summary>
+        </member>
         <member name="M:AutoFixture.Kernel.DelegateGenerator.Create(System.Object,AutoFixture.Kernel.ISpecimenContext)">
             <summary>
             Creates a new <see cref="T:System.Delegate"/> instance.
@@ -3845,6 +3860,20 @@
             <returns>
             A new <see cref="T:System.Delegate"/> instance, if <paramref name="request"/> is a request for a
             <see cref="T:System.Delegate"/>; otherwise, a <see cref="T:AutoFixture.Kernel.NoSpecimen"/> instance.
+            </returns>
+        </member>
+        <member name="T:AutoFixture.Kernel.DelegateSpecification">
+            <summary>
+            A specification that evaluates specimen request to see if it's for the delegate type.
+            </summary>
+        </member>
+        <member name="M:AutoFixture.Kernel.DelegateSpecification.IsSatisfiedBy(System.Object)">
+            <summary>
+            Evaluates a request for a specimen.
+            </summary>
+            <param name="request">The specimen request.</param>
+            <returns>
+            <see langword="true"/> if <paramref name="request"/> is of a delegate type, otherwise <see langword="false"/>.
             </returns>
         </member>
         <member name="T:AutoFixture.Kernel.DictionaryRelay">
