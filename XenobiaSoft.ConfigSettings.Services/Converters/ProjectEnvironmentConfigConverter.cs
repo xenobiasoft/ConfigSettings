@@ -64,7 +64,7 @@ namespace XenobiaSoft.ConfigSettings.Services.Converters
 
 		private Environment GetEnvironment(string environmentName)
 		{
-			Environment environment = null;
+			Environment environment;
 
 			if (_cache.Exists<Environment>(environmentName))
 			{
