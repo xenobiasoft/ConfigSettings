@@ -7,16 +7,16 @@ namespace XenobiaSoft.ConfigSettings.Services.Converters
 {
 	public class SharedAppSettingConverter : ISharedAppSettingConverter
 	{
-		private readonly IBuilderFactory _BuilderFactory;
+		private readonly IBuilderFactory _builderFactory;
 
 		public SharedAppSettingConverter(IBuilderFactory builderFactory)
 		{
-			_BuilderFactory = builderFactory;
+			_builderFactory = builderFactory;
 		}
 
 		public SharedAppSetting Convert(AppSettingModel sharedAppSettingModel)
 		{
-			return _BuilderFactory
+			return _builderFactory
 				.SharedAppSettingsBuilder()
 				.WithKey(sharedAppSettingModel.Key)
 				.WithValue(sharedAppSettingModel.Value)

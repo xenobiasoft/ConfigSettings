@@ -9,11 +9,11 @@ namespace XenobiaSoft.ConfigSettings.Services
 {
 	public class Cache : ICache
 	{
-		private readonly Dictionary<Type, Dictionary<string, BaseEntity>> _Storage;
+		private readonly Dictionary<Type, Dictionary<string, BaseEntity>> _storage;
 
 		public Cache()
 		{
-			_Storage = new Dictionary<Type, Dictionary<string, BaseEntity>>();
+			_storage = new Dictionary<Type, Dictionary<string, BaseEntity>>();
 		}
 
 		public void Add<TType>(string key, TType entity) where TType : BaseEntity
@@ -30,7 +30,7 @@ namespace XenobiaSoft.ConfigSettings.Services
 
 		public void Clear()
 		{
-			_Storage.Clear();
+			_storage.Clear();
 		}
 
 		public bool Exists<TType>(string key) where TType : BaseEntity
@@ -47,19 +47,19 @@ namespace XenobiaSoft.ConfigSettings.Services
 
 		private Dictionary<string, BaseEntity> GetTypeStorage(Type type)
 		{
-			if (!_Storage.ContainsKey(type))
+			if (!_storage.ContainsKey(type))
 			{
 				CreateTypeStorage(type);
 			}
 
-			return _Storage[type];
+			return _storage[type];
 		}
 
 		private void CreateTypeStorage(Type type)
 		{
-			if (!_Storage.ContainsKey(type))
+			if (!_storage.ContainsKey(type))
 			{
-				_Storage.Add(type, new Dictionary<string, BaseEntity>());
+				_storage.Add(type, new Dictionary<string, BaseEntity>());
 			}
 		}
 
@@ -75,6 +75,6 @@ namespace XenobiaSoft.ConfigSettings.Services
 			return (TType) typeStorage[key];
 		}
 
-		public int Count => _Storage.Sum(x => x.Value.Count);
+		public int Count => _storage.Sum(x => x.Value.Count);
 	}
 }

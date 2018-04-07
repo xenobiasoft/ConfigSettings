@@ -8,13 +8,13 @@ namespace XenobiaSoft.ConfigSettings.Services.Converters
 {
 	public class ProjectEnvironmentConfigConverter : IProjectEnvironmentConfigConverter
 	{
-		private readonly IBuilderFactory _BuilderFactory;
-		private readonly ICache _Cache;
+		private readonly IBuilderFactory _builderFactory;
+		private readonly ICache _cache;
 
 		public ProjectEnvironmentConfigConverter(IBuilderFactory builderFactory, ICache cache)
 		{
-			_Cache = cache;
-			_BuilderFactory = builderFactory;
+			_cache = cache;
+			_builderFactory = builderFactory;
 		}
 
 		public ProjectEnvironmentConfig Convert(ProjectEnvironmentConfiguration projectConfiguration)
@@ -23,7 +23,7 @@ namespace XenobiaSoft.ConfigSettings.Services.Converters
 
 			var environment = GetEnvironment(projectConfiguration.EnvironmentName);
 
-			var appSettingHolder = _BuilderFactory
+			var appSettingHolder = _builderFactory
 				.ProjectEnvironmentConfigBuilder()
 				.WithConfigPath(projectConfiguration.ConfigPath)
 				.WithProject(project)
@@ -31,7 +31,7 @@ namespace XenobiaSoft.ConfigSettings.Services.Converters
 
 			projectConfiguration.AppSettings.ForEach(x =>
 			{
-				appSettingHolder = appSettingHolder.Add(_BuilderFactory
+				appSettingHolder = appSettingHolder.Add(_builderFactory
 					.AppSettingBuilder()
 					.WithKey(x.Key)
 					.WithValue(x.Value)
@@ -46,17 +46,17 @@ namespace XenobiaSoft.ConfigSettings.Services.Converters
 		{
 			Project project;
 
-			if (_Cache.Exists<Project>(projectName))
+			if (_cache.Exists<Project>(projectName))
 			{
-				project = _Cache.Get<Project>(projectName);
+				project = _cache.Get<Project>(projectName);
 			}
 			else
 			{
-				project = _BuilderFactory
+				project = _builderFactory
 					.ProjectBuilder()
 					.WithName(projectName)
 					.Build();
-				_Cache.Add(projectName, project);
+				_cache.Add(projectName, project);
 			}
 
 			return project;
@@ -66,17 +66,17 @@ namespace XenobiaSoft.ConfigSettings.Services.Converters
 		{
 			Environment environment = null;
 
-			if (_Cache.Exists<Environment>(environmentName))
+			if (_cache.Exists<Environment>(environmentName))
 			{
-				environment = _Cache.Get<Environment>(environmentName);
+				environment = _cache.Get<Environment>(environmentName);
 			}
 			else
 			{
-				environment = _BuilderFactory
+				environment = _builderFactory
 					.EnvironmentBuilder()
 					.WithName(environmentName)
 					.Build();
-				_Cache.Add(environmentName, environment);
+				_cache.Add(environmentName, environment);
 			}
 
 			return environment;

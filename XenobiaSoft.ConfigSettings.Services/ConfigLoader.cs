@@ -8,24 +8,22 @@ namespace XenobiaSoft.ConfigSettings.Services
 {
 	public class ConfigLoader : IConfigLoader
 	{
-		private const string SharedAppSettingsFileName = "SharedAppSettings.Config";
-		private const string SharedAppSettingsFolderName = "Configs";
-		private readonly IProjectConfigurationParser _ProjectConfigParser;
-		private readonly IAppSettingsParser _AppSettingsParser;
-		private readonly IFileService _FileService;
+		private readonly IProjectConfigurationParser _projectConfigParser;
+		private readonly IAppSettingsParser _appSettingsParser;
+		private readonly IFileService _fileService;
 
 		public ConfigLoader(IProjectConfigurationParser projectConfigParser, IAppSettingsParser appSettingsParser, IFileService fileService)
 		{
-			_FileService = fileService;
-			_AppSettingsParser = appSettingsParser;
-			_ProjectConfigParser = projectConfigParser;
+			_fileService = fileService;
+			_appSettingsParser = appSettingsParser;
+			_projectConfigParser = projectConfigParser;
 		}
 
 		public List<ProjectEnvironmentConfiguration> LoadConfigs(string rootPath)
 		{
-			var configFiles = _FileService.GetConfigFiles(rootPath);
+			var configFiles = _fileService.GetConfigFiles(rootPath);
 			var projectConfigurations = configFiles
-				.Select(_ProjectConfigParser.Parse)
+				.Select(_projectConfigParser.Parse)
 				.Where(x => x != null)
 				.ToList();
 
@@ -34,7 +32,7 @@ namespace XenobiaSoft.ConfigSettings.Services
 
 		public List<AppSettingModel> LoadSharedAppSettings(string rootPath)
 		{
-			return _AppSettingsParser.Parse(_FileService.GetSharedAppSettings(rootPath));
+			return _appSettingsParser.Parse(_fileService.GetSharedAppSettings(rootPath));
 		}
 	}
 }

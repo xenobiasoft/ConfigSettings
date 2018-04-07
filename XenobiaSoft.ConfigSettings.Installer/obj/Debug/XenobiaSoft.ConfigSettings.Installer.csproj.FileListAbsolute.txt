@@ -15,3 +15,4 @@ E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\obj\Debug\XenobiaS
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\obj\Debug\XenobiaSoft.ConfigSettings.Installer.csproj.CopyComplete
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\obj\Debug\XenobiaSoft.ConfigSettings.Installer.dll
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\obj\Debug\XenobiaSoft.ConfigSettings.Installer.pdb
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\XenobiaSoft.ConfigSettings.Installer.dll.config
