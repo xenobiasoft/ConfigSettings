@@ -6,6 +6,6 @@
 		public string Value { get; set; }
 		public int ProjectEnvironmentConfigId { get; set; }
 		public ProjectEnvironmentConfig ProjectEnvironmentConfig { get; set; }
-		public Enums.TransformType TransformType { get; set; }
+		public TransformType TransformType { get; set; }
 	}
 }

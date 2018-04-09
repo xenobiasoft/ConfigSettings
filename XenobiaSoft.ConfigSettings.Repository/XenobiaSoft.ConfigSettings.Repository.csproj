@@ -89,7 +89,7 @@
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\ProjectEnvironmentConfig.cs" />
     <Compile Include="Models\SharedAppSetting.cs" />
-    <Compile Include="TransformType.cs" />
+    <Compile Include="TransformTypeEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ConfigSettingsUnitOfWork.cs" />
   </ItemGroup>

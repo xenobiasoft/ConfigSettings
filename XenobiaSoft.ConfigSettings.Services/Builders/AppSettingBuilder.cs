@@ -61,10 +61,10 @@ namespace XenobiaSoft.ConfigSettings.Services.Builders
 		{
 			if (string.IsNullOrEmpty(transformType))
 			{
-				transformType = Enums.TransformType.None.ToString();
+				transformType = Repository.TransformType.None.ToString();
 			}
 
-			if (!Enum.TryParse(transformType, true, out Enums.TransformType _))
+			if (!Enum.TryParse(transformType, true, out TransformType _))
 			{
 				throw new ArgumentException(nameof(transformType));
 			}
@@ -80,7 +80,7 @@ namespace XenobiaSoft.ConfigSettings.Services.Builders
 
 		public AppSetting Build()
 		{
-			Enum.TryParse(TransformType, out Enums.TransformType transformType);
+			Enum.TryParse(TransformType, out TransformType transformType);
 
 			var appSetting = new AppSetting
 			{

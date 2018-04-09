@@ -17,7 +17,7 @@ namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services.Builders.AppSettings
 			// Assemble
 
 			// Act
-			var actual = Sut.WithTransformType(Create<Enums.TransformType>().ToString());
+			var actual = Sut.WithTransformType(Create<TransformType>().ToString());
 
 			// Assert
 			actual.Should().BeAssignableTo<IAppSettingBuilder>();
@@ -40,7 +40,7 @@ namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services.Builders.AppSettings
 		public void NullOrEmptyString_SetsTransformTypeToNone(string transformValue)
 		{
 			// Assemble
-			var transformTypeNone = Enums.TransformType.None.ToString();
+			var transformTypeNone = TransformType.None.ToString();
 
 			// Act
 			var newState = Sut.WithTransformType(transformValue) as AppSettingBuilder;
