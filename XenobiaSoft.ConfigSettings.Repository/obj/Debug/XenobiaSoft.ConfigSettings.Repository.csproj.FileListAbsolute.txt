@@ -16,9 +16,9 @@ E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Repository\bin\Debug\DnsClie
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Repository\bin\Debug\MongoDB.Bson.dll
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Repository\bin\Debug\MongoDB.Driver.Core.dll
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Repository\bin\Debug\MongoDB.Driver.dll
-E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Repository\bin\Debug\System.Buffers.dll
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Repository\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Repository\bin\Debug\DnsClient.xml
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Repository\bin\Debug\MongoDB.Bson.xml
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Repository\bin\Debug\MongoDB.Driver.xml
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Repository\bin\Debug\MongoDB.Driver.Core.xml
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Repository\bin\Debug\System.Buffers.dll
