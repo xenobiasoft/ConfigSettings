@@ -1,4 +1,4 @@
-﻿using XenobiaSoft.ConfigSettings.Repository.Models;
+﻿using XenobiaSoft.ConfigSettings.Data.Models;
 
 namespace XenobiaSoft.ConfigSettings.Services.Interfaces.Builder.ProjectEnvironmentConfigs
 {

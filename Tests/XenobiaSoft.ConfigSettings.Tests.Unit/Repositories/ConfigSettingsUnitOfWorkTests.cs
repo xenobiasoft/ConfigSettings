@@ -1,8 +1,8 @@
 ﻿using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using XenobiaSoft.ConfigSettings.Repository;
-using XenobiaSoft.ConfigSettings.Repository.Interfaces;
+using XenobiaSoft.ConfigSettings.Data;
+using XenobiaSoft.ConfigSettings.Data.Interfaces;
 
 namespace XenobiaSoft.ConfigSettings.Tests.Unit.Repositories
 {

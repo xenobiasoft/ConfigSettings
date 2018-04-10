@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using XenobiaSoft.ConfigSettings.Repository.Interfaces;
-using XenobiaSoft.ConfigSettings.Repository.Models;
+using XenobiaSoft.ConfigSettings.Data.Interfaces;
+using XenobiaSoft.ConfigSettings.Data.Models;
 using XenobiaSoft.ConfigSettings.Services.Interfaces;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Converters;
 

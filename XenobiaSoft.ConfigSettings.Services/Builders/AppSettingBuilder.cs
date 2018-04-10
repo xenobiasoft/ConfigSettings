@@ -1,6 +1,6 @@
 ﻿using System;
-using XenobiaSoft.ConfigSettings.Repository;
-using XenobiaSoft.ConfigSettings.Repository.Models;
+using XenobiaSoft.ConfigSettings.Data;
+using XenobiaSoft.ConfigSettings.Data.Models;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Builder.AppSettings;
 
 namespace XenobiaSoft.ConfigSettings.Services.Builders
@@ -61,7 +61,7 @@ namespace XenobiaSoft.ConfigSettings.Services.Builders
 		{
 			if (string.IsNullOrEmpty(transformType))
 			{
-				transformType = Repository.TransformType.None.ToString();
+				transformType = Data.TransformType.None.ToString();
 			}
 
 			if (!Enum.TryParse(transformType, true, out TransformType _))

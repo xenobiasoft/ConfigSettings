@@ -127,15 +127,14 @@
     <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XenobiaSoft.ConfigSettings.Repository\XenobiaSoft.ConfigSettings.Data.csproj">
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XenobiaSoft.ConfigSettings.Data\XenobiaSoft.ConfigSettings.Data.csproj">
       <Project>{f4d498eb-8630-4305-9ade-f4449b2b264b}</Project>
       <Name>XenobiaSoft.ConfigSettings.Data</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

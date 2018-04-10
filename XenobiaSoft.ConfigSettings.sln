@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XenobiaSoft.ConfigSettings.Data", "XenobiaSoft.ConfigSettings.Repository\XenobiaSoft.ConfigSettings.Data.csproj", "{F4D498EB-8630-4305-9ADE-F4449B2B264B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XenobiaSoft.ConfigSettings.Data", "XenobiaSoft.ConfigSettings.Data\XenobiaSoft.ConfigSettings.Data.csproj", "{F4D498EB-8630-4305-9ADE-F4449B2B264B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XenobiaSoft.ConfigSettings.Services", "XenobiaSoft.ConfigSettings.Services\XenobiaSoft.ConfigSettings.Services.csproj", "{3E2BF47C-F828-4592-9FF3-9B90FB388F20}"
 EndProject

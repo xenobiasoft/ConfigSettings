@@ -1,4 +1,4 @@
-﻿using XenobiaSoft.ConfigSettings.Repository.Models;
+﻿using XenobiaSoft.ConfigSettings.Data.Models;
 using XenobiaSoft.ConfigSettings.Services.Interfaces;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Builder;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Converters;

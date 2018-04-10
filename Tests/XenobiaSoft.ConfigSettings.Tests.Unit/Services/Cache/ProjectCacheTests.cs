@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using XenobiaSoft.ConfigSettings.Repository.Models;
+using XenobiaSoft.ConfigSettings.Data.Models;
 
 namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services.Cache
 {

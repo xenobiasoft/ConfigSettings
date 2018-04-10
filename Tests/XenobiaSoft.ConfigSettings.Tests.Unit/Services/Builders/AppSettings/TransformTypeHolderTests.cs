@@ -2,7 +2,7 @@
 using AutoFixture;
 using FluentAssertions;
 using NUnit.Framework;
-using XenobiaSoft.ConfigSettings.Repository;
+using XenobiaSoft.ConfigSettings.Data;
 using XenobiaSoft.ConfigSettings.Services.Builders;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Builder.AppSettings;
 
