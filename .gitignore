@@ -11,6 +11,7 @@
 *.userprefs
 
 # Build results
+<<<<<<< HEAD
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -22,6 +23,18 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Bb]in/
+=======
+**/[Dd]ebug/
+**/[Dd]ebugPublic/
+**/[Rr]elease/
+**/[Rr]eleases/
+**/x64/
+**/x86/
+**/build/
+**/bld/
+**/[Bb]in/
+**/[Oo]bj/
+>>>>>>> 5cc82843dc1aac104ebf7c13cf1665c59644b6fc
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -34,6 +47,18 @@ bld/
 *.VisualState.xml
 TestResult.xml
 
+<<<<<<< HEAD
+=======
+# Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# DNX
+project.lock.json
+artifacts/
+
+>>>>>>> 5cc82843dc1aac104ebf7c13cf1665c59644b6fc
 *_i.c
 *_p.c
 *_i.h
@@ -71,6 +96,12 @@ ipch/
 *.psess
 *.vsp
 *.vspx
+<<<<<<< HEAD
+=======
+
+# TFS 2012 Local Workspace
+$tf/
+>>>>>>> 5cc82843dc1aac104ebf7c13cf1665c59644b6fc
 
 # Guidance Automation Toolkit
 *.gpState
@@ -86,6 +117,36 @@ _ReSharper*/
 # TeamCity is a build add-in
 _TeamCity*
 
+<<<<<<< HEAD
+=======
+# DotCover is a Code Coverage Tool
+*.dotCover
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+
+# MightyMoose
+*.mm.*
+AutoTest.Net/
+
+# Web workbench (sass)
+.sass-cache/
+
+# Installshield output folder
+[Ee]xpress/
+
+# DocProject is a documentation generator add-in
+DocProject/buildhelp/
+DocProject/Help/*.HxT
+DocProject/Help/*.HxC
+DocProject/Help/*.hhc
+DocProject/Help/*.hhk
+DocProject/Help/*.hhp
+DocProject/Help/Html2
+DocProject/Help/html
+
+>>>>>>> 5cc82843dc1aac104ebf7c13cf1665c59644b6fc
 # Click-Once directory
 publish/
 
@@ -112,6 +173,12 @@ publish/
 csx/
 *.build.csdef
 
+<<<<<<< HEAD
+=======
+# Windows Store app package directory
+AppPackages/
+
+>>>>>>> 5cc82843dc1aac104ebf7c13cf1665c59644b6fc
 # Visual Studio cache files
 # files ending in .cache can be ignored
 *.[Cc]ache
@@ -129,6 +196,20 @@ ClientBin/
 node_modules/
 orleans.codegen.cs
 
+<<<<<<< HEAD
+=======
+# RIA/Silverlight projects
+Generated_Code/
+
+# Backup & report files from converting an old project file
+# to a newer Visual Studio version. Backup files are not needed,
+# because we have git ;-)
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+
+>>>>>>> 5cc82843dc1aac104ebf7c13cf1665c59644b6fc
 # SQL Server files
 *.mdf
 *.ldf
@@ -144,6 +225,20 @@ FakesAssemblies/
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
 
+<<<<<<< HEAD
+=======
+# Visual Studio 6 build log
+*.plg
+
+# Visual Studio 6 workspace options file
+*.opt
+
+# LightSwitch generated files
+GeneratedArtifacts/
+_Pvt_Extensions/
+ModelManifest.xml
+
+>>>>>>> 5cc82843dc1aac104ebf7c13cf1665c59644b6fc
 # Nuget packages folder
 packages/
 !repositories.config

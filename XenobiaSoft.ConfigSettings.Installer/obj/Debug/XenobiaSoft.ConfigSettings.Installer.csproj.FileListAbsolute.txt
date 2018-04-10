@@ -12,6 +12,10 @@ E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\obj\Debug\XenobiaS
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\obj\Debug\XenobiaSoft.ConfigSettings.Installer.csproj.CopyComplete
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\obj\Debug\XenobiaSoft.ConfigSettings.Installer.dll
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\obj\Debug\XenobiaSoft.ConfigSettings.Installer.pdb
+<<<<<<< HEAD
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\XenobiaSoft.ConfigSettings.Data.dll
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\XenobiaSoft.ConfigSettings.Data.pdb
 E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\XenobiaSoft.ConfigSettings.Data.dll.config
+=======
+E:\Github\ConfigSettings\XenobiaSoft.ConfigSettings.Installer\bin\Debug\XenobiaSoft.ConfigSettings.Installer.dll.config
+>>>>>>> 5cc82843dc1aac104ebf7c13cf1665c59644b6fc
