@@ -61,6 +61,7 @@
       <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
       <Private>True</Private>
@@ -92,11 +93,18 @@
     <Compile Include="TransformTypeEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ConfigSettingsUnitOfWork.cs" />
+    <Compile Include="V2\Interfaces\IPersistable.cs" />
+    <Compile Include="V2\Interfaces\IReadOnlyRepository.cs" />
+    <Compile Include="V2\Interfaces\IRepository.cs" />
+    <Compile Include="V2\Interfaces\IRepositoryFactory.cs" />
+    <Compile Include="V2\Interfaces\ISavingRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="V2\Models\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
