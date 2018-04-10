@@ -1,7 +1,7 @@
 ﻿using System;
 using FluentAssertions;
 using NUnit.Framework;
-using XenobiaSoft.ConfigSettings.Repository.Models;
+using XenobiaSoft.ConfigSettings.Data.Models;
 using XenobiaSoft.ConfigSettings.Services.Exceptions;
 using XenobiaSoft.ConfigSettings.Services.Interfaces;
 

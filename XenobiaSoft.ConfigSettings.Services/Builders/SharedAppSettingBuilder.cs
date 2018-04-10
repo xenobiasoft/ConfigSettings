@@ -1,5 +1,5 @@
 ﻿using System;
-using XenobiaSoft.ConfigSettings.Repository.Models;
+using XenobiaSoft.ConfigSettings.Data.Models;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Builder.SharedAppSettings;
 
 namespace XenobiaSoft.ConfigSettings.Services.Builders

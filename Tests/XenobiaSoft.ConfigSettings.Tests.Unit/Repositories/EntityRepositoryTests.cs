@@ -3,9 +3,9 @@ using System.Data.Entity;
 using AutoFixture;
 using FluentAssertions;
 using NUnit.Framework;
-using XenobiaSoft.ConfigSettings.Repository;
-using XenobiaSoft.ConfigSettings.Repository.Interfaces;
-using XenobiaSoft.ConfigSettings.Repository.Models;
+using XenobiaSoft.ConfigSettings.Data;
+using XenobiaSoft.ConfigSettings.Data.Interfaces;
+using XenobiaSoft.ConfigSettings.Data.Models;
 using XenobiaSoft.ConfigSettings.Tests.Unit.Mocks;
 
 namespace XenobiaSoft.ConfigSettings.Tests.Unit.Repositories

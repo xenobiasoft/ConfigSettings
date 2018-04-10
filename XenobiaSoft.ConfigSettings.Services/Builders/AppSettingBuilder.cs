@@ -1,6 +1,6 @@
 ﻿using System;
-using XenobiaSoft.ConfigSettings.Repository;
-using XenobiaSoft.ConfigSettings.Repository.Models;
+using XenobiaSoft.ConfigSettings.Data;
+using XenobiaSoft.ConfigSettings.Data.Models;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Builder.AppSettings;
 
 namespace XenobiaSoft.ConfigSettings.Services.Builders
@@ -61,10 +61,10 @@ namespace XenobiaSoft.ConfigSettings.Services.Builders
 		{
 			if (string.IsNullOrEmpty(transformType))
 			{
-				transformType = Enums.TransformType.None.ToString();
+				transformType = Data.TransformType.None.ToString();
 			}
 
-			if (!Enum.TryParse(transformType, true, out Enums.TransformType _))
+			if (!Enum.TryParse(transformType, true, out TransformType _))
 			{
 				throw new ArgumentException(nameof(transformType));
 			}
@@ -80,7 +80,7 @@ namespace XenobiaSoft.ConfigSettings.Services.Builders
 
 		public AppSetting Build()
 		{
-			Enum.TryParse(TransformType, out Enums.TransformType transformType);
+			Enum.TryParse(TransformType, out TransformType transformType);
 
 			var appSetting = new AppSetting
 			{

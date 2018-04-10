@@ -4,7 +4,7 @@ using FluentAssertions;
 using NUnit.Framework;
 using XenobiaSoft.ConfigSettings.Services.Builders;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Builder.ProjectEnvironmentConfigs;
-using Environment = XenobiaSoft.ConfigSettings.Repository.Models.Environment;
+using Environment = XenobiaSoft.ConfigSettings.Data.Models.Environment;
 
 namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services.Builders.ProjectEnvironmentConfigs
 {

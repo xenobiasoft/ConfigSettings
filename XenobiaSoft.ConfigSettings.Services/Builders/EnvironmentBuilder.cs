@@ -1,6 +1,6 @@
 using System;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Builder.Environments;
-using Environment = XenobiaSoft.ConfigSettings.Repository.Models.Environment;
+using Environment = XenobiaSoft.ConfigSettings.Data.Models.Environment;
 
 namespace XenobiaSoft.ConfigSettings.Services.Builders
 {

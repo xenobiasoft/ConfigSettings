@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using XenobiaSoft.ConfigSettings.Repository.Models;
+using XenobiaSoft.ConfigSettings.Data.Models;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Builder.ProjectEnvironmentConfigs;
-using Environment = XenobiaSoft.ConfigSettings.Repository.Models.Environment;
+using Environment = XenobiaSoft.ConfigSettings.Data.Models.Environment;
 
 namespace XenobiaSoft.ConfigSettings.Services.Builders
 {

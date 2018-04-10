@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using XenobiaSoft.ConfigSettings.Repository.Interfaces;
-using XenobiaSoft.ConfigSettings.Repository.Models;
+using XenobiaSoft.ConfigSettings.Data.Interfaces;
+using XenobiaSoft.ConfigSettings.Data.Models;
 using XenobiaSoft.ConfigSettings.Services.Interfaces;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Converters;
 
@@ -9,29 +9,29 @@ namespace XenobiaSoft.ConfigSettings.Services
 {
 	public class ConfigService : IConfigService
 	{
-		private readonly IConfigLoader _ConfigLoader;
-		private readonly IProjectEnvironmentConfigConverter _ProjectEnvironmentConfigConverter;
-		private readonly ISharedAppSettingConverter _SharedAppSettingsConverter;
-		private readonly IUnitOfWork _UnitOfWork;
+		private readonly IConfigLoader _configLoader;
+		private readonly IProjectEnvironmentConfigConverter _projectEnvironmentConfigConverter;
+		private readonly ISharedAppSettingConverter _sharedAppSettingsConverter;
+		private readonly IUnitOfWork _unitOfWork;
 
 		public ConfigService(IConfigLoader configLoader, 
 			IProjectEnvironmentConfigConverter projectEnvironmentConfigConverter,
 			IUnitOfWork unitOfWork,
 			ISharedAppSettingConverter sharedAppSettingsConverter)
 		{
-			_UnitOfWork = unitOfWork;
-			_SharedAppSettingsConverter = sharedAppSettingsConverter;
-			_ProjectEnvironmentConfigConverter = projectEnvironmentConfigConverter;
-			_ConfigLoader = configLoader;
+			_unitOfWork = unitOfWork;
+			_sharedAppSettingsConverter = sharedAppSettingsConverter;
+			_projectEnvironmentConfigConverter = projectEnvironmentConfigConverter;
+			_configLoader = configLoader;
 		}
 
 		public void ClearDb()
 		{
-			_UnitOfWork.AppSettings.RemoveAll();
-			_UnitOfWork.Environments.RemoveAll();
-			_UnitOfWork.Projects.RemoveAll();
-			_UnitOfWork.ProjectEnvironmentConfigs.RemoveAll();
-			_UnitOfWork.SharedAppSettings.RemoveAll();
+			_unitOfWork.AppSettings.RemoveAll();
+			_unitOfWork.Environments.RemoveAll();
+			_unitOfWork.Projects.RemoveAll();
+			_unitOfWork.ProjectEnvironmentConfigs.RemoveAll();
+			_unitOfWork.SharedAppSettings.RemoveAll();
 		}
 
 		public void LoadConfigurations(string rootPath)
@@ -50,14 +50,14 @@ namespace XenobiaSoft.ConfigSettings.Services
 			SaveProjectEnvironmentConfigs(projectEnvironmentConfigs);
 			SaveSharedAppSettings(sharedAppSettings);
 
-			_UnitOfWork.Commit();
+			_unitOfWork.Commit();
 		}
 
 		private List<ProjectEnvironmentConfig> LoadProjectConfigs(string rootPath)
 		{
-			var projectConfigs = _ConfigLoader.LoadConfigs(rootPath);
+			var projectConfigs = _configLoader.LoadConfigs(rootPath);
 			var projectEnvironmentConfigs = projectConfigs
-				.Select(_ProjectEnvironmentConfigConverter.Convert)
+				.Select(_projectEnvironmentConfigConverter.Convert)
 				.ToList();
 
 			return projectEnvironmentConfigs;
@@ -65,29 +65,29 @@ namespace XenobiaSoft.ConfigSettings.Services
 
 		private void SaveProjects(List<Project> projects)
 		{
-			projects.ForEach(_UnitOfWork.Projects.Add);
+			projects.ForEach(_unitOfWork.Projects.Add);
 		}
 
 		private void SaveEnvironments(List<Environment> environments)
 		{
-			environments.ForEach(_UnitOfWork.Environments.Add);
+			environments.ForEach(_unitOfWork.Environments.Add);
 		}
 
 		private void SaveAppSettings(List<AppSetting> appSettings)
 		{
-			appSettings.ForEach(_UnitOfWork.AppSettings.Add);
+			appSettings.ForEach(_unitOfWork.AppSettings.Add);
 		}
 
 		private void SaveProjectEnvironmentConfigs(List<ProjectEnvironmentConfig> projectEnvironmentConfigs)
 		{
-			projectEnvironmentConfigs.ForEach(_UnitOfWork.ProjectEnvironmentConfigs.Add);
+			projectEnvironmentConfigs.ForEach(_unitOfWork.ProjectEnvironmentConfigs.Add);
 		}
 
 		private List<SharedAppSetting> LoadSharedAppSettings(string rootPath)
 		{
-			var sharedAppSettingModels = _ConfigLoader.LoadSharedAppSettings(rootPath);
+			var sharedAppSettingModels = _configLoader.LoadSharedAppSettings(rootPath);
 			var sharedAppSettings = sharedAppSettingModels
-				.Select(_SharedAppSettingsConverter.Convert)
+				.Select(_sharedAppSettingsConverter.Convert)
 				.ToList();
 
 			return sharedAppSettings;
@@ -95,7 +95,7 @@ namespace XenobiaSoft.ConfigSettings.Services
 
 		private void SaveSharedAppSettings(List<SharedAppSetting> sharedAppSettings)
 		{
-			sharedAppSettings.ForEach(_UnitOfWork.SharedAppSettings.Add);
+			sharedAppSettings.ForEach(_unitOfWork.SharedAppSettings.Add);
 		}
 	}
 }

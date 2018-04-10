@@ -8,9 +8,6 @@ namespace XenobiaSoft.ConfigSettings.Services
 {
 	public class ConfigFileService : IFileService
 	{
-		private const string SharedAppSettingsFileName = "SharedAppSettings.Config";
-		private const string SharedAppSettingsFolderName = "Configs";
-
 		public List<ConfigFile> GetConfigFiles(string rootPath)
 		{
 			var directoryInfo = GetDirectoryInfo(rootPath);
@@ -25,12 +22,15 @@ namespace XenobiaSoft.ConfigSettings.Services
 
 		public ConfigFile GetSharedAppSettings(string rootPath)
 		{
+			const string sharedAppSettingsFileName = "SharedAppSettings.Config";
+			const string sharedAppSettingsFolderName = "Configs";
+
 			var directoryInfo = GetDirectoryInfo(rootPath);
 
 			return directoryInfo
-				.GetDirectories(SharedAppSettingsFolderName, SearchOption.TopDirectoryOnly)
+				.GetDirectories(sharedAppSettingsFolderName, SearchOption.TopDirectoryOnly)
 				.FirstOrDefault()
-				?.GetFiles(SharedAppSettingsFileName)
+				?.GetFiles(sharedAppSettingsFileName)
 				.Select(x => new ConfigFile(x.FullName, x.Name, x.Directory?.Name))
 				.FirstOrDefault();
 		}

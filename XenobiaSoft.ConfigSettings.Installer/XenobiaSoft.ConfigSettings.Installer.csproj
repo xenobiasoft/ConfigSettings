@@ -45,9 +45,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XenobiaSoft.ConfigSettings.Repository\XenobiaSoft.ConfigSettings.Repository.csproj">
+    <ProjectReference Include="..\XenobiaSoft.ConfigSettings.Data\XenobiaSoft.ConfigSettings.Data.csproj">
       <Project>{f4d498eb-8630-4305-9ade-f4449b2b264b}</Project>
-      <Name>XenobiaSoft.ConfigSettings.Repository</Name>
+      <Name>XenobiaSoft.ConfigSettings.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\XenobiaSoft.ConfigSettings.Services\XenobiaSoft.ConfigSettings.Services.csproj">
       <Project>{3e2bf47c-f828-4592-9ff3-9b90fb388f20}</Project>

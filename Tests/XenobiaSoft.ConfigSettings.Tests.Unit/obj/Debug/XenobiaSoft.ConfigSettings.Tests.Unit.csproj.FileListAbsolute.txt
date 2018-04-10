@@ -16,11 +16,8 @@ E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\E
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\FluentAssertions.dll
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\Moq.dll
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\nunit.framework.dll
-E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\XenobiaSoft.ConfigSettings.Repository.dll
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\XenobiaSoft.ConfigSettings.Services.dll
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\Autofac.dll
-E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\XenobiaSoft.ConfigSettings.Repository.pdb
-E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\XenobiaSoft.ConfigSettings.Repository.dll.config
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\XenobiaSoft.ConfigSettings.Services.pdb
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\XenobiaSoft.ConfigSettings.Services.dll.config
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\EntityFramework.xml
@@ -142,3 +139,6 @@ E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\A
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\Castle.Core.xml
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\nunit.framework.pdb
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\System.Threading.Tasks.Extensions.xml
+E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\XenobiaSoft.ConfigSettings.Data.dll
+E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\XenobiaSoft.ConfigSettings.Data.pdb
+E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\XenobiaSoft.ConfigSettings.Data.dll.config
