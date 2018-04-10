@@ -159,9 +159,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\XenobiaSoft.ConfigSettings.Repository\XenobiaSoft.ConfigSettings.Repository.csproj">
+    <ProjectReference Include="..\..\XenobiaSoft.ConfigSettings.Repository\XenobiaSoft.ConfigSettings.Data.csproj">
       <Project>{f4d498eb-8630-4305-9ade-f4449b2b264b}</Project>
-      <Name>XenobiaSoft.ConfigSettings.Repository</Name>
+      <Name>XenobiaSoft.ConfigSettings.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\XenobiaSoft.ConfigSettings.Services\XenobiaSoft.ConfigSettings.Services.csproj">
       <Project>{3E2BF47C-F828-4592-9FF3-9B90FB388F20}</Project>
