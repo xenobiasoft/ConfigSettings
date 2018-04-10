@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XenobiaSoft.ConfigSettings.Data", "XenobiaSoft.ConfigSettings.Data\XenobiaSoft.ConfigSettings.Data.csproj", "{F4D498EB-8630-4305-9ADE-F4449B2B264B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XenobiaSoft.ConfigSettings.Services", "XenobiaSoft.ConfigSettings.Services\XenobiaSoft.ConfigSettings.Services.csproj", "{3E2BF47C-F828-4592-9FF3-9B90FB388F20}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XenobiaSoft.ConfigSettings.Installer", "XenobiaSoft.ConfigSettings.Installer\XenobiaSoft.ConfigSettings.Installer.csproj", "{168EE7B6-C102-476C-AB1F-1605A5565C47}"
@@ -17,16 +15,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XenobiaSoft.ConfigSettings.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XenobiaSoft.Tests.Utilities", "Tests\XenobiaSoft.Tests.Utilities\XenobiaSoft.Tests.Utilities.csproj", "{EC3700F7-7A90-467A-8FA0-4D9B27D0E273}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XenobiaSoft.ConfigSettings.Data", "XenobiaSoft.ConfigSettings.Data\XenobiaSoft.ConfigSettings.Data.csproj", "{F4D498EB-8630-4305-9ADE-F4449B2B264B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F4D498EB-8630-4305-9ADE-F4449B2B264B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4D498EB-8630-4305-9ADE-F4449B2B264B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4D498EB-8630-4305-9ADE-F4449B2B264B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4D498EB-8630-4305-9ADE-F4449B2B264B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3E2BF47C-F828-4592-9FF3-9B90FB388F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3E2BF47C-F828-4592-9FF3-9B90FB388F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E2BF47C-F828-4592-9FF3-9B90FB388F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,6 +43,10 @@ Global
 		{EC3700F7-7A90-467A-8FA0-4D9B27D0E273}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC3700F7-7A90-467A-8FA0-4D9B27D0E273}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC3700F7-7A90-467A-8FA0-4D9B27D0E273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4D498EB-8630-4305-9ADE-F4449B2B264B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4D498EB-8630-4305-9ADE-F4449B2B264B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4D498EB-8630-4305-9ADE-F4449B2B264B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4D498EB-8630-4305-9ADE-F4449B2B264B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
