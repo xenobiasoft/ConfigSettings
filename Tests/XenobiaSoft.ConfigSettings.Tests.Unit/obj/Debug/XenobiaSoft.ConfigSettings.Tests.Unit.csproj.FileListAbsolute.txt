@@ -142,5 +142,8 @@ E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\obj\Debug\X
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\obj\Debug\XenobiaSoft.ConfigSettings.Tests.Unit.csproj.CopyComplete
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\obj\Debug\XenobiaSoft.ConfigSettings.Tests.Unit.dll
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\obj\Debug\XenobiaSoft.ConfigSettings.Tests.Unit.pdb
+<<<<<<< HEAD
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\MongoDB.Bson.dll
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Unit\bin\Debug\MongoDB.Bson.xml
+=======
+>>>>>>> 6ccad5ce91e9548a65a588b226a40f38c43fce40
