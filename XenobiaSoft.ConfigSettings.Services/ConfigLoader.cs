@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using XenobiaSoft.ConfigSettings.Data.V2.Models;
 using XenobiaSoft.ConfigSettings.Services.Interfaces;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Parsers;
 using XenobiaSoft.ConfigSettings.Services.Models;
@@ -30,7 +31,7 @@ namespace XenobiaSoft.ConfigSettings.Services
 			return projectConfigurations;
 		}
 
-		public List<AppSettingModel> LoadSharedAppSettings(string rootPath)
+		public List<AppSetting> LoadSharedAppSettings(string rootPath)
 		{
 			return _appSettingsParser.Parse(_fileService.GetSharedAppSettings(rootPath));
 		}

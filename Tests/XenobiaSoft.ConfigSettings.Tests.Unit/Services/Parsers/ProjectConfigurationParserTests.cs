@@ -3,6 +3,7 @@ using System.IO;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
+using XenobiaSoft.ConfigSettings.Data.V2.Models;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Parsers;
 using XenobiaSoft.ConfigSettings.Services.Models;
 using XenobiaSoft.ConfigSettings.Services.Parsers;
@@ -76,7 +77,7 @@ namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services.Parsers
 			{
 				// Assemble
 				var configFile = GetConfigFileInfo("Sub4", "app.config");
-				ResolveMock<IAppSettingsParser>().Setup(x => x.Parse(It.IsAny<ConfigFile>())).Returns(new List<AppSettingModel>());
+				ResolveMock<IAppSettingsParser>().Setup(x => x.Parse(It.IsAny<ConfigFile>())).Returns(new List<AppSetting>());
 
 				// Act
 				var actualProjectConfig = Sut.Parse(configFile);

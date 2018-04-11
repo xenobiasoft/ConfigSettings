@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
+using XenobiaSoft.ConfigSettings.Data.V2.Models;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Parsers;
 using XenobiaSoft.ConfigSettings.Services.Models;
 
@@ -8,7 +9,7 @@ namespace XenobiaSoft.ConfigSettings.Services.Parsers
 {
 	public class AppSettingsParser : IAppSettingsParser
 	{
-		public List<AppSettingModel> Parse(ConfigFile configFile)
+		public List<AppSetting> Parse(ConfigFile configFile)
 		{
 			XNamespace ns = "http://schemas.microsoft.com/XML-Document-Transform";
 			var xElement = XDocument.Load(configFile.FilePath).Root;
@@ -22,9 +23,9 @@ namespace XenobiaSoft.ConfigSettings.Services.Parsers
 					var value = x.Attribute("value")?.Value;
 					var transformType = x.Attribute(ns + "Transform")?.Value;
 
-					return new AppSettingModel(key, value, transformType);
+					return new AppSetting(key, value, transformType);
 				})
-				.ToList() ?? new List<AppSettingModel>();
+				.ToList() ?? new List<AppSetting>();
 		}
 	}
 }

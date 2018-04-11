@@ -117,8 +117,6 @@
     <Compile Include="Interfaces\Parsers\IParser.cs" />
     <Compile Include="Interfaces\Builder\Projects\IProjectBuilder.cs" />
     <Compile Include="Interfaces\Parsers\IProjectConfigurationParser.cs" />
-    <Compile Include="Models\AppSettingModel.cs" />
-    <Compile Include="Models\ProjectEnvironmentConfiguration.cs" />
     <Compile Include="Builders\EnvironmentBuilder.cs" />
     <Compile Include="Builders\ProjectBuilder.cs" />
     <Compile Include="Parsers\AppSettingsParser.cs" />

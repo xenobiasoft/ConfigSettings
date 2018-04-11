@@ -1,6 +1,7 @@
 ﻿using AutoFixture;
 using FluentAssertions;
 using NUnit.Framework;
+using XenobiaSoft.ConfigSettings.Data.V2.Models;
 using XenobiaSoft.ConfigSettings.Services.Converters;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Builder.AppSettings;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Converters;
@@ -18,7 +19,7 @@ namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services.Converters
 		public void Convert_CallsWithKey_OnAppSettingBuilder()
 		{
 			// Assemble
-			var appSettingModel = Create<AppSettingModel>();
+			var appSettingModel = Create<AppSetting>();
 
 			// Act
 			Sut.Convert(appSettingModel);
@@ -31,7 +32,7 @@ namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services.Converters
 		public void Convert_CallsWithValue_OnAppSettingBuilder()
 		{
 			// Assemble
-			var appSettingModel = Create<AppSettingModel>();
+			var appSettingModel = Create<AppSetting>();
 
 			// Act
 			Sut.Convert(appSettingModel);
@@ -43,7 +44,7 @@ namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services.Converters
 		[Test]
 		public void Convert_CallsWithTransformType_OnAppSettingBuilder()
 		{
-			var appSettingModel = Create<AppSettingModel>();
+			var appSettingModel = Create<AppSetting>();
 
 			// Act
 			Sut.Convert(appSettingModel);
@@ -55,7 +56,7 @@ namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services.Converters
 		[Test]
 		public void Convert_CallsBuild_OnAppSettingBuilder()
 		{
-			var appSettingModel = Create<AppSettingModel>();
+			var appSettingModel = Create<AppSetting>();
 
 			// Act
 			Sut.Convert(appSettingModel);

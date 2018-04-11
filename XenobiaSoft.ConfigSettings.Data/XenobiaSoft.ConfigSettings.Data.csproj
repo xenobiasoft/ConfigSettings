@@ -99,6 +99,10 @@
     <Compile Include="V2\Interfaces\IRepository.cs" />
     <Compile Include="V2\Interfaces\IRepositoryFactory.cs" />
     <Compile Include="V2\Interfaces\ISavingRepository.cs" />
+    <Compile Include="V2\Models\AppSetting.cs" />
+    <Compile Include="V2\Models\ProjectEnvironmentConfiguration.cs" />
+    <Compile Include="V2\Repositories\ConfigSettingsReadOnlyRepository.cs" />
+    <Compile Include="V2\Repositories\ConfigSettingsSavingRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -106,8 +110,6 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="V2\Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,3 +33,5 @@ E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Integration\bin\
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Integration\bin\Debug\EntityFramework.SqlServer.xml
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Integration\bin\Debug\XenobiaSoft.ConfigSettings.Data.pdb
 E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Integration\bin\Debug\XenobiaSoft.ConfigSettings.Data.dll.config
+E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Integration\bin\Debug\MongoDB.Bson.dll
+E:\Github\ConfigSettings\Tests\XenobiaSoft.ConfigSettings.Tests.Integration\bin\Debug\MongoDB.Bson.xml
