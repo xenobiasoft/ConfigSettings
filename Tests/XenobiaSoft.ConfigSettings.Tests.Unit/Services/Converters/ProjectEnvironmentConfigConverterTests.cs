@@ -2,6 +2,7 @@
 using Moq;
 using NUnit.Framework;
 using XenobiaSoft.ConfigSettings.Data.Models;
+using XenobiaSoft.ConfigSettings.Data.V2.Models;
 using XenobiaSoft.ConfigSettings.Services.Converters;
 using XenobiaSoft.ConfigSettings.Services.Interfaces;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Builder.Environments;

@@ -1,10 +1,9 @@
 ﻿using XenobiaSoft.ConfigSettings.Data.Models;
-using XenobiaSoft.ConfigSettings.Services.Models;
 
 namespace XenobiaSoft.ConfigSettings.Services.Interfaces.Converters
 {
 	public interface IAppSettingConverter
 	{
-		AppSetting Convert(AppSettingModel appSettingModel);
+		AppSetting Convert(Data.V2.Models.AppSetting appSettingModel);
 	}
 }

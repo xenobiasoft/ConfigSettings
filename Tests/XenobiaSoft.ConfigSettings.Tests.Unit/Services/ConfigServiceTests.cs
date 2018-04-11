@@ -2,10 +2,10 @@ using Moq;
 using NUnit.Framework;
 using XenobiaSoft.ConfigSettings.Data.Interfaces;
 using XenobiaSoft.ConfigSettings.Data.Models;
+using XenobiaSoft.ConfigSettings.Data.V2.Models;
 using XenobiaSoft.ConfigSettings.Services;
 using XenobiaSoft.ConfigSettings.Services.Interfaces;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Converters;
-using XenobiaSoft.ConfigSettings.Services.Models;
 
 namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services
 {
@@ -64,7 +64,7 @@ namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services
 				Sut.LoadConfigurations(Create<string>());
 
 				// Assert
-				mockSharedAppSettingsConverter.Verify(x => x.Convert(It.IsAny<AppSettingModel>()), Times.Exactly(3));
+				mockSharedAppSettingsConverter.Verify(x => x.Convert(It.IsAny<ConfigSettings.Data.V2.Models.AppSetting>()), Times.Exactly(3));
 			}
 
 			[Test]
@@ -110,13 +110,13 @@ namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services
 			public void CallsToSaveAppSettings()
 			{
 				// Assemble
-				var mockRepository = ResolveMock<IRepository<AppSetting>>();
+				var mockRepository = ResolveMock<IRepository<ConfigSettings.Data.Models.AppSetting>>();
 
 				// Act
 				Sut.LoadConfigurations(Create<string>());
 
 				// Assert
-				mockRepository.Verify(x => x.Add(It.IsAny<AppSetting>()), Times.Exactly(9));
+				mockRepository.Verify(x => x.Add(It.IsAny<ConfigSettings.Data.Models.AppSetting>()), Times.Exactly(9));
 			}
 
 			[Test]
@@ -153,7 +153,7 @@ namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services
 			public void CallsToDeleteAllAppSettings()
 			{
 				// Assemble
-				var mockAppSettingRepository = ResolveMock<IRepository<AppSetting>>();
+				var mockAppSettingRepository = ResolveMock<IRepository<ConfigSettings.Data.Models.AppSetting>>();
 
 				// Act
 				Sut.ClearDb();

@@ -1,6 +1,7 @@
 ﻿using AutoFixture;
 using FluentAssertions;
 using NUnit.Framework;
+using XenobiaSoft.ConfigSettings.Data.V2.Models;
 using XenobiaSoft.ConfigSettings.Services.Converters;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Builder.SharedAppSettings;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Converters;
@@ -18,7 +19,7 @@ namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services.Converters
 		public void Convert_CallsWithKey_OnBuilder()
 		{
 			// Assemble
-			var sharedAppSettingModel = Create<AppSettingModel>();
+			var sharedAppSettingModel = Create<AppSetting>();
 
 			// Act
 			Sut.Convert(sharedAppSettingModel);
@@ -31,7 +32,7 @@ namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services.Converters
 		public void Convert_CallsWithValue_OnBuilder()
 		{
 			// Assemble
-			var sharedAppSettingModel = Create<AppSettingModel>();
+			var sharedAppSettingModel = Create<AppSetting>();
 
 			// Act
 			Sut.Convert(sharedAppSettingModel);
@@ -46,7 +47,7 @@ namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services.Converters
 			// Assemble
 
 			// Act
-			Sut.Convert(Create<AppSettingModel>());
+			Sut.Convert(Create<AppSetting>());
 
 			// Assert
 			_MockSharedAppSettingBuilder.BuildWasCalled.Should().BeTrue();
