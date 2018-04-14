@@ -101,8 +101,11 @@
     <Compile Include="V2\Interfaces\ISavingRepository.cs" />
     <Compile Include="V2\Models\AppSetting.cs" />
     <Compile Include="V2\Models\ProjectEnvironmentConfiguration.cs" />
-    <Compile Include="V2\Repositories\ConfigSettingsReadOnlyRepository.cs" />
-    <Compile Include="V2\Repositories\ConfigSettingsSavingRepository.cs" />
+    <Compile Include="V2\Interfaces\IDbContext.cs" />
+    <Compile Include="V2\Repositories\DbContext.cs" />
+    <Compile Include="V2\Repositories\ReadOnlyRepository.cs" />
+    <Compile Include="V2\Repositories\SavingRepository.cs" />
+    <Compile Include="V2\Repositories\RepositoryFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
