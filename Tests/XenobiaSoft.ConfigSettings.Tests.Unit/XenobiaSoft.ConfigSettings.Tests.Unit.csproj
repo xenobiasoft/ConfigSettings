@@ -68,8 +68,14 @@
       <HintPath>..\..\packages\FluentAssertions.5.2.0\lib\net45\FluentAssertions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MongoDB.Bson, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MongoDB.Bson.2.5.0\lib\net45\MongoDB.Bson.dll</HintPath>
+    <Reference Include="MongoDB.Bson, Version=2.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MongoDB.Bson.2.5.1\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MongoDB.Driver.2.5.1\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MongoDB.Driver.Core.2.5.1\lib\net45\MongoDB.Driver.Core.dll</HintPath>
     </Reference>
     <Reference Include="Moq, Version=4.8.0.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Moq.4.8.2\lib\net45\Moq.dll</HintPath>
@@ -100,55 +106,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoMockTestFixture.cs" />
-    <Compile Include="Data\Repositories\ProjectEnvironmentConfigReadOnlyRepositoryTests.cs" />
-    <Compile Include="Data\Repositories\ProjectEnvironmentConfigSavingRepositoryTests.cs" />
-    <Compile Include="Data\Repositories\ReadOnlyRepositoryTests.cs" />
-    <Compile Include="Data\Repositories\RepositoryFactoryTests.cs" />
-    <Compile Include="Data\Repositories\SavingRepositoryTests.cs" />
-    <Compile Include="Services\Builders\AppSettings\FactoryMethodTests.cs" />
-    <Compile Include="Services\Builders\AppSettings\KeyHolderTests.cs" />
-    <Compile Include="Services\Builders\AppSettings\TransformTypeHolderTests.cs" />
-    <Compile Include="Services\Builders\AppSettings\ValueHolderTests.cs" />
-    <Compile Include="Services\Builders\Environments\FactoryMethodTests.cs" />
-    <Compile Include="Services\Builders\Environments\EnvironmentNameHolderTests.cs" />
-    <Compile Include="Services\Builders\ProjectEnvironmentConfigs\AppSettingHolderTests.cs" />
-    <Compile Include="Services\Builders\ProjectEnvironmentConfigs\ConfigPathHolderTests.cs" />
-    <Compile Include="Services\Builders\ProjectEnvironmentConfigs\EnvironmentHolderTests.cs" />
-    <Compile Include="Services\Builders\ProjectEnvironmentConfigs\FactoryMethodTests.cs" />
-    <Compile Include="Services\Builders\ProjectEnvironmentConfigs\ProjectHolderTests.cs" />
-    <Compile Include="Services\Builders\Projects\FactoryMethodTests.cs" />
-    <Compile Include="Services\Builders\Projects\ProjectNameHolderTests.cs" />
-    <Compile Include="Services\Builders\SharedAppSettings\FactoryMethodTests.cs" />
-    <Compile Include="Services\Builders\SharedAppSettings\KeyHolderTests.cs" />
-    <Compile Include="Services\Builders\SharedAppSettings\ValueHolderTests.cs" />
+    <Compile Include="Data\Builders\AppSettings\FactoryMethodTests.cs" />
+    <Compile Include="Data\Builders\AppSettings\KeyHolderTests.cs" />
+    <Compile Include="Data\Builders\AppSettings\TransformTypeHolderTests.cs" />
+    <Compile Include="Data\Builders\AppSettings\ValueHolderTests.cs" />
+    <Compile Include="Data\Builders\ProjectEnvironmentConfigs\AppSettingHolderTests.cs" />
+    <Compile Include="Data\Builders\ProjectEnvironmentConfigs\ConfigPathHolderTests.cs" />
+    <Compile Include="Data\Builders\ProjectEnvironmentConfigs\EnvironmentNameHolderTests.cs" />
+    <Compile Include="Data\Builders\ProjectEnvironmentConfigs\FactoryMethodTests.cs" />
+    <Compile Include="Data\Builders\ProjectEnvironmentConfigs\ProjectNameHolderTests.cs" />
+    <Compile Include="Data\Builders\SharedAppSettings\FactoryMethodTests.cs" />
+    <Compile Include="Data\Builders\SharedAppSettings\KeyHolderTests.cs" />
+    <Compile Include="Data\Builders\SharedAppSettings\ValueHolderTests.cs" />
     <Compile Include="Services\ConfigFileServiceTests.cs" />
     <Compile Include="AutoMockFixtureInterface.cs" />
     <Compile Include="AutoMockFixtureConcrete.cs" />
     <Compile Include="Mocks\Builders\MockAppSettingBuilder.cs" />
     <Compile Include="Mocks\Builders\MockSharedAppSettingBuilder.cs" />
-    <Compile Include="Mocks\MockDbEntitySet.cs" />
-    <Compile Include="Data\AppSettingRepositoryTests.cs" />
-    <Compile Include="Data\ConfigSettingsUnitOfWorkTests.cs" />
-    <Compile Include="Data\EntityRepositoryTests.cs" />
-    <Compile Include="Data\EnvironmentRepositoryTests.cs" />
-    <Compile Include="Data\ProjectEnvironmentConfigRepositoryTests.cs" />
-    <Compile Include="Data\ProjectRepositoryTests.cs" />
-    <Compile Include="Data\SharedAppSettingRepositoryTests.cs" />
-    <Compile Include="Services\Builders\BuilderFactoryTests.cs" />
-    <Compile Include="Services\Builders\ProjectEnvironmentConfigs\BuilderTests.cs" />
-    <Compile Include="Services\Builders\SharedAppSettings\BuilderTests.cs" />
-    <Compile Include="Services\Cache\CacheTests.cs" />
-    <Compile Include="Services\Cache\EnvironmentCacheTests.cs" />
-    <Compile Include="Services\Cache\ProjectCacheTests.cs" />
+    <Compile Include="Data\Builders\BuilderFactoryTests.cs" />
+    <Compile Include="Data\Builders\ProjectEnvironmentConfigs\BuilderTests.cs" />
+    <Compile Include="Data\Builders\SharedAppSettings\BuilderTests.cs" />
     <Compile Include="Services\ConfigLoaderTests.cs" />
-    <Compile Include="Services\Builders\AppSettings\BuilderTests.cs" />
+    <Compile Include="Data\Builders\AppSettings\BuilderTests.cs" />
     <Compile Include="Services\ConfigServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Builders\Environments\BuildTests.cs" />
-    <Compile Include="Services\Builders\Projects\ProjectBuilderTests.cs" />
-    <Compile Include="Services\Converters\AppSettingConverterTests.cs" />
-    <Compile Include="Services\Converters\ProjectEnvironmentConfigConverterTests.cs" />
-    <Compile Include="Services\Converters\SharedAppSettingsConverterTests.cs" />
     <Compile Include="Services\Parsers\AppSettingsParserTests.cs" />
     <Compile Include="Services\Parsers\ProjectConfigurationParserTests.cs" />
     <Compile Include="Services\UtilityTests.cs" />

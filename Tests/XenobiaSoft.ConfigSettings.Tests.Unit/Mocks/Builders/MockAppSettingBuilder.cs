@@ -1,5 +1,5 @@
-﻿using XenobiaSoft.ConfigSettings.Data.Models;
-using XenobiaSoft.ConfigSettings.Services.Interfaces.Builder.AppSettings;
+﻿using XenobiaSoft.ConfigSettings.Data.Interfaces.Builder.AppSettings;
+using XenobiaSoft.ConfigSettings.Data.Models;
 
 namespace XenobiaSoft.ConfigSettings.Tests.Unit.Mocks.Builders
 {

@@ -1,5 +1,5 @@
-﻿using XenobiaSoft.ConfigSettings.Data.Models;
-using XenobiaSoft.ConfigSettings.Services.Interfaces.Builder.SharedAppSettings;
+﻿using XenobiaSoft.ConfigSettings.Data.Interfaces.Builder.SharedAppSettings;
+using XenobiaSoft.ConfigSettings.Data.Models;
 
 namespace XenobiaSoft.ConfigSettings.Tests.Unit.Mocks.Builders
 {
@@ -17,10 +17,10 @@ namespace XenobiaSoft.ConfigSettings.Tests.Unit.Mocks.Builders
 			return this;
 		}
 
-		public SharedAppSetting Build()
+		public AppSetting Build()
 		{
 			BuildWasCalled = true;
-			return new SharedAppSetting();
+			return new AppSetting();
 		}
 
 		public string Key { get; private set; }

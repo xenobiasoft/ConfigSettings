@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
-using XenobiaSoft.ConfigSettings.Data.V2.Models;
+using XenobiaSoft.ConfigSettings.Data;
+using XenobiaSoft.ConfigSettings.Data.Models;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Parsers;
 using XenobiaSoft.ConfigSettings.Services.Models;
 
@@ -21,9 +23,16 @@ namespace XenobiaSoft.ConfigSettings.Services.Parsers
 				{
 					var key = x.Attribute("key")?.Value;
 					var value = x.Attribute("value")?.Value;
-					var transformType = x.Attribute(ns + "Transform")?.Value;
+					var transformTypeValue = x.Attribute(ns + "Transform")?.Value ?? "None";
 
-					return new AppSetting(key, value, transformType);
+					Enum.TryParse<TransformType>(transformTypeValue, out var transformType);
+
+					return new AppSetting
+					{
+						Key = key,
+						Value = value,
+						TransformType = transformType
+					};
 				})
 				.ToList() ?? new List<AppSetting>();
 		}

@@ -2,6 +2,7 @@
 using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
+using XenobiaSoft.ConfigSettings.Data;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Parsers;
 using XenobiaSoft.ConfigSettings.Services.Models;
 using XenobiaSoft.ConfigSettings.Services.Parsers;
@@ -31,7 +32,7 @@ namespace XenobiaSoft.ConfigSettings.Tests.Unit.Services.Parsers
 			public void CanParseTransformConfig()
 			{
 				// Assemble
-				var expectedTransformType = "Replace";
+				var expectedTransformType = TransformType.Replace;
 				var configFile = GetConfigFileInfo("Sub1", "app.qa.config");
 
 				// Act
