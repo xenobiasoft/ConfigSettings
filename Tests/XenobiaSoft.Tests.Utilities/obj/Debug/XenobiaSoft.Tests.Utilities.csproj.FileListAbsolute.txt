@@ -3,3 +3,4 @@ E:\Github\ConfigSettings\Tests\XenobiaSoft.Tests.Utilities\bin\Debug\XenobiaSoft
 E:\Github\ConfigSettings\Tests\XenobiaSoft.Tests.Utilities\obj\Debug\XenobiaSoft.Tests.Utilities.csproj.CoreCompileInputs.cache
 E:\Github\ConfigSettings\Tests\XenobiaSoft.Tests.Utilities\obj\Debug\XenobiaSoft.Tests.Utilities.dll
 E:\Github\ConfigSettings\Tests\XenobiaSoft.Tests.Utilities\obj\Debug\XenobiaSoft.Tests.Utilities.pdb
+E:\Github\ConfigSettings\Tests\XenobiaSoft.Tests.Utilities\obj\Debug\XenobiaSoft.Tests.Utilities.csprojResolveAssemblyReference.cache

@@ -3,7 +3,7 @@ using System.IO;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using XenobiaSoft.ConfigSettings.Data.V2.Models;
+using XenobiaSoft.ConfigSettings.Data.Models;
 using XenobiaSoft.ConfigSettings.Services.Interfaces.Parsers;
 using XenobiaSoft.ConfigSettings.Services.Models;
 using XenobiaSoft.ConfigSettings.Services.Parsers;

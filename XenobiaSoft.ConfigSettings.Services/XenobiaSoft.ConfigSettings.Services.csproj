@@ -66,59 +66,25 @@
     <CodeContractsRuntimeCheckingLevel>ReleaseRequires</CodeContractsRuntimeCheckingLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
-    </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Builders\AppSettingBuilder.cs" />
-    <Compile Include="Cache.cs" />
     <Compile Include="ConfigFileService.cs" />
     <Compile Include="Exceptions\ExistsInCacheException.cs" />
     <Compile Include="Exceptions\NotFoundException.cs" />
     <Compile Include="Interfaces\IFileService.cs" />
     <Compile Include="Models\ConfigFile.cs" />
-    <Compile Include="ServicesModule.cs" />
-    <Compile Include="Interfaces\Builder\IBuilderFactory.cs" />
-    <Compile Include="Builders\ProjectEnvironmentConfigBuilder.cs" />
-    <Compile Include="Builders\SharedAppSettingBuilder.cs" />
     <Compile Include="ConfigLoader.cs" />
-    <Compile Include="Converters\ProjectEnvironmentConfigConverter.cs" />
-    <Compile Include="Converters\SharedAppSettingConverter.cs" />
-    <Compile Include="Interfaces\Builder\AppSettings\IAppSettingBuilder.cs" />
-    <Compile Include="Interfaces\Builder\AppSettings\IKeyHolder.cs" />
-    <Compile Include="Interfaces\Builder\AppSettings\ITransformTypeHolder.cs" />
-    <Compile Include="Interfaces\Builder\AppSettings\IValueHolder.cs" />
-    <Compile Include="Builders\BuilderFactory.cs" />
-    <Compile Include="Interfaces\Builder\Environments\IEnvironmentNameHolder.cs" />
-    <Compile Include="Interfaces\Builder\ProjectEnvironmentConfigs\IAppSettingHolder.cs" />
-    <Compile Include="Interfaces\Builder\ProjectEnvironmentConfigs\IConfigPathHolder.cs" />
-    <Compile Include="Interfaces\Builder\ProjectEnvironmentConfigs\IEnvironmentHolder.cs" />
-    <Compile Include="Interfaces\Builder\ProjectEnvironmentConfigs\IProjectEnvironmentConfigBuilder.cs" />
-    <Compile Include="Interfaces\Builder\ProjectEnvironmentConfigs\IProjectHolder.cs" />
-    <Compile Include="Interfaces\Builder\Projects\IProjectNameHolder.cs" />
-    <Compile Include="Interfaces\Builder\SharedAppSettings\IKeyHolder.cs" />
-    <Compile Include="Interfaces\Builder\SharedAppSettings\IValueHolder.cs" />
-    <Compile Include="Interfaces\Builder\SharedAppSettings\ISharedAppSettingBuilder.cs" />
-    <Compile Include="Converters\AppSettingConverter.cs" />
-    <Compile Include="Interfaces\Converters\IAppSettingsConverter.cs" />
-    <Compile Include="Interfaces\Converters\IProjectEnvironmentConfigConverter.cs" />
-    <Compile Include="Interfaces\Converters\ISharedAppSettingConverter.cs" />
     <Compile Include="Interfaces\IConfigService.cs" />
-    <Compile Include="Interfaces\ICache.cs" />
     <Compile Include="ConfigService.cs" />
     <Compile Include="Interfaces\IConfigLoader.cs" />
-    <Compile Include="Interfaces\Builder\Environments\IEnvironmentBuilder.cs" />
     <Compile Include="Interfaces\Parsers\IAppSettingsParser.cs" />
     <Compile Include="Interfaces\Parsers\IParser.cs" />
-    <Compile Include="Interfaces\Builder\Projects\IProjectBuilder.cs" />
     <Compile Include="Interfaces\Parsers\IProjectConfigurationParser.cs" />
-    <Compile Include="Builders\EnvironmentBuilder.cs" />
-    <Compile Include="Builders\ProjectBuilder.cs" />
     <Compile Include="Parsers\AppSettingsParser.cs" />
     <Compile Include="Parsers\ProjectConfigurationParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,7 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XenobiaSoft.ConfigSettings.Data\XenobiaSoft.ConfigSettings.Data.csproj">

@@ -35,26 +35,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
-    </Reference>
     <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
       <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MongoDB.Bson, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.6.0\lib\net45\MongoDB.Bson.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="MongoDB.Driver, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.6.0\lib\net45\MongoDB.Driver.dll</HintPath>
     </Reference>
-    <Reference Include="MongoDB.Bson, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MongoDB.Bson.2.5.0\lib\net45\MongoDB.Bson.dll</HintPath>
-    </Reference>
-    <Reference Include="MongoDB.Driver, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MongoDB.Driver.2.5.0\lib\net45\MongoDB.Driver.dll</HintPath>
-    </Reference>
-    <Reference Include="MongoDB.Driver.Core, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MongoDB.Driver.Core.2.5.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    <Reference Include="MongoDB.Driver.Core, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.6.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -69,40 +61,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\AppSettingConfiguration.cs" />
-    <Compile Include="Context\ConfigSettingsContext.cs" />
-    <Compile Include="Context\EnvironmentConfiguration.cs" />
-    <Compile Include="Context\ProjectConfiguration.cs" />
-    <Compile Include="Context\ProjectEnvironmentConfigConfiguration.cs" />
-    <Compile Include="Context\SharedAppSettingConfiguration.cs" />
-    <Compile Include="EntityRepository.cs" />
-    <Compile Include="Interfaces\IAppSettingRepository.cs" />
-    <Compile Include="Interfaces\IEnvironmentRepository.cs" />
-    <Compile Include="Interfaces\IProjectEnvironmentConfigRepository.cs" />
-    <Compile Include="Interfaces\IProjectRepository.cs" />
-    <Compile Include="Interfaces\ISharedAppSettingsRepository.cs" />
-    <Compile Include="RepositoryModule.cs" />
-    <Compile Include="Interfaces\IConfigSettingsContext.cs" />
-    <Compile Include="Interfaces\IRepository.cs" />
-    <Compile Include="Interfaces\IUnitOfWork.cs" />
-    <Compile Include="Models\AppSetting.cs" />
-    <Compile Include="Models\BaseEntity.cs" />
-    <Compile Include="Models\Environment.cs" />
-    <Compile Include="Models\Project.cs" />
-    <Compile Include="Models\ProjectEnvironmentConfig.cs" />
-    <Compile Include="Models\SharedAppSetting.cs" />
+    <Compile Include="Builders\AppSettingBuilder.cs" />
+    <Compile Include="Builders\BuilderFactory.cs" />
+    <Compile Include="Builders\ProjectEnvironmentConfigBuilder.cs" />
+    <Compile Include="Builders\SharedAppSettingBuilder.cs" />
+    <Compile Include="Interfaces\Builder\AppSettings\IAppSettingBuilder.cs" />
+    <Compile Include="Interfaces\Builder\AppSettings\IKeyHolder.cs" />
+    <Compile Include="Interfaces\Builder\AppSettings\ITransformTypeHolder.cs" />
+    <Compile Include="Interfaces\Builder\AppSettings\IValueHolder.cs" />
+    <Compile Include="Interfaces\Builder\IBuilderFactory.cs" />
+    <Compile Include="Interfaces\Builder\ProjectEnvironmentConfigs\IAppSettingHolder.cs" />
+    <Compile Include="Interfaces\Builder\ProjectEnvironmentConfigs\IConfigPathHolder.cs" />
+    <Compile Include="Interfaces\Builder\ProjectEnvironmentConfigs\IEnvironmentNameHolder.cs" />
+    <Compile Include="Interfaces\Builder\ProjectEnvironmentConfigs\IProjectEnvironmentConfigBuilder.cs" />
+    <Compile Include="Interfaces\Builder\ProjectEnvironmentConfigs\IProjectNameHolder.cs" />
+    <Compile Include="Interfaces\Builder\SharedAppSettings\IKeyHolder.cs" />
+    <Compile Include="Interfaces\Builder\SharedAppSettings\ISharedAppSettingBuilder.cs" />
+    <Compile Include="Interfaces\Builder\SharedAppSettings\IValueHolder.cs" />
     <Compile Include="TransformTypeEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ConfigSettingsUnitOfWork.cs" />
-    <Compile Include="V2\Interfaces\IPersistable.cs" />
-    <Compile Include="V2\Interfaces\IReadOnlyRepository.cs" />
-    <Compile Include="V2\Interfaces\IRepository.cs" />
-    <Compile Include="V2\Interfaces\IRepositoryFactory.cs" />
-    <Compile Include="V2\Interfaces\ISavingRepository.cs" />
-    <Compile Include="V2\Models\AppSetting.cs" />
-    <Compile Include="V2\Models\ProjectEnvironmentConfiguration.cs" />
-    <Compile Include="V2\Repositories\ConfigSettingsReadOnlyRepository.cs" />
-    <Compile Include="V2\Repositories\ConfigSettingsSavingRepository.cs" />
+    <Compile Include="Interfaces\IReadOnlyRepository.cs" />
+    <Compile Include="Interfaces\IRepositoryFactory.cs" />
+    <Compile Include="Interfaces\IWriteRepository.cs" />
+    <Compile Include="Models\AppSetting.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\ProjectEnvironmentConfiguration.cs" />
+    <Compile Include="Repositories\ReadOnlyRepository.cs" />
+    <Compile Include="Repositories\WriteRepository.cs" />
+    <Compile Include="Repositories\RepositoryFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
