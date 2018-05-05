@@ -1,6 +1,4 @@
 ﻿using Autofac;
-using XenobiaSoft.ConfigSettings.Data;
-using XenobiaSoft.ConfigSettings.Services;
 
 namespace XenobiaSoft.ConfigSettings.Installer
 {

@@ -3,7 +3,7 @@ using MongoDB.Driver;
 using XenobiaSoft.ConfigSettings.Data.Builders;
 using XenobiaSoft.ConfigSettings.Data.Repositories;
 
-namespace XenobiaSoft.ConfigSettings.Data
+namespace XenobiaSoft.ConfigSettings.Installer
 {
 	public class DataInstallerModule : Module
 	{

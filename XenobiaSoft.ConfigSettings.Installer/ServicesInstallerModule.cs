@@ -1,7 +1,8 @@
 ﻿using Autofac;
+using XenobiaSoft.ConfigSettings.Services;
 using XenobiaSoft.ConfigSettings.Services.Parsers;
 
-namespace XenobiaSoft.ConfigSettings.Services
+namespace XenobiaSoft.ConfigSettings.Installer
 {
 	public class ServicesInstallerModule : Module
 	{
